@@ -1,0 +1,425 @@
+:root {
+    --bg-color: #212830;
+    --main-color: #41ce5c;
+    --caret-color: #41ce5c;
+    --sub-color: #788386;
+    --sub-alt-color: #141b23;
+    --text-color: #ccdae6;
+    --error-color: #c23e3a;
+    --error-extra-color: #8d1611;
+
+}
+* {
+  user-select: none;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color:var(--bg-color);
+    color: var(--text-color);
+    font-size: 2.7rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    margin: -15px 2%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-right:10%;
+    margin-left:7%;
+}
+header a{
+    text-decoration:none;
+}
+#logo {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    height: 100%;
+}
+h1 {
+  color: var(--text-color);
+  font-size: 35px;
+  margin: 50px;
+  
+}
+.icon {
+    width: 40px;
+    fill: var(--main-color);
+    margin-top:-17px;
+}
+h1 .text{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+h1 .top{
+    font-size:.7rem;
+    margin-top: -19px;
+    margin-bottom:-13px;
+    color:var(--sub-color)
+}
+a h1{
+    margin-right:5px;
+}
+nav{
+    direction:rtl;
+    display:inline-flex;
+    margin: 45px;
+    align-items: center;
+}
+nav a{
+    direction:rtl;
+    color: var(--sub-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 8px 15px;
+    font-family: 'Noto Sans Arabic', sans-serif;
+    transition: color 0.2s ease;
+}
+.menu{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.testConfig {
+  background-color: var(--sub-alt-color);
+  padding: 0; /* Remove any guess-based padding */
+  border-radius: 8px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 40px;            /* Set a fixed height */
+  line-height: 40px;       /* Align text vertically */
+  padding: 0px 16px;       /* Controlled vertical padding */
+  padding-bottom:11px;
+}
+
+.puncAndNum button,
+.mode .textButton,
+.time .textButton {
+  background: none;
+  border: none;
+  color: var(--sub-color);
+  font-size: 14px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.puncAndNum button i {
+  font-size: 16px;
+}
+
+.textButton.active,
+.puncAndNum button.active,
+.time .textButton.active {
+  color: var(--caret-color);
+  background-color: var(--sub-alt-color);
+  border-radius: 4px;
+}
+
+.spacer {
+  width: 7px;
+  height: 25px;
+  background-color: var(--bg-color);
+  border:none;
+  border-radius: 7px; 
+  margin: 11px 3px 0;
+}
+
+.leftSpacer {
+  margin-left: 10px;
+}
+
+.rightSpacer {
+  margin-right: 10px;
+}
+.textButton:hover{
+    color: var(--text-color) !important;
+    background: none !important;
+    border: none !important;
+}
+.row button i {
+    vertical-align: middle;
+    display: inline-block;
+}
+.testModesNotice{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:var(--sub-color);
+    margin-bottom:25px;
+}
+.testModesNotice i{
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0 5px;
+}
+main .textButton{
+    color: var(--sub-color);
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    padding: 0px 10px;
+    direction:rtl;
+    font-family: 'Noto Sans Arabic', sans-serif;
+}
+
+main {
+  width: 1520px;
+  height: 330px;
+  margin: 131px auto;
+  flex: 1 0 auto;
+}
+#mainHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 6px 99px;
+    border: 1px solid var(--sub-color);
+    border-radius: 5px;
+    padding: 20px 20px;
+    background: rgba(255, 255, 255, .1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+#buttons{
+    text-align: left;
+    font-family: 'Noto Sans Arabic', sans-serif;
+}
+button{
+    background:rgba(255,255,255,.2);
+    border:0;
+    color:var(--text-color);
+    padding:17px 35px;
+    border-radius:5px;
+    cursor:pointer;
+    font-family: 'Noto Sans Arabic', sans-serif;
+    font-weight:bold;
+    font-size:1.2rem;
+}
+button:hover{
+    background:rgba(255,255,255,.11);
+    color:rgba(245, 238, 238, 0.87);
+}
+div#game{
+    line-height:35px;
+    height:207px;
+    overflow:hidden;
+    position:relative;
+    margin-top:100px;
+    font-size:25px;
+    margin:0 155px;
+}
+div#game:focus{
+    outline:0;
+}
+#words{
+    filter: blur(5px);
+    color: var(--sub-color);
+    font-size:1.9rem;
+    direction:rtl;
+}
+#game:focus #words{
+    filter: blur(0);
+}
+#focus-error{
+    position:absolute;
+    inset:0;
+    text-align:center;
+    padding-top:75px;
+    font-size:21px;
+    color:var(--text-color)
+}
+
+#game:focus #focus-error{
+    display:none;
+}
+div.word{
+    display:inline-block;
+    font-family: 'Noto Sans Arabic', sans-serif;
+    margin: 17px 11px;
+}
+.letter.correct{
+    color: #fff;
+}
+.letter.incorrect{
+    color: var(--error-color);
+}
+.letter.incorrect.extra{
+    color: var(--error-extra-color);
+}
+@keyframes blink{
+    0%{
+        opacity:1;
+    }
+    25%{
+        opacity:0;
+    }
+}
+#cursor{
+    display:none;
+    width: 3px;
+    height:2.7rem;
+    background:var(--caret-color);
+    position:fixed;
+    top:373px;
+    right:359px;
+    animation:blink 1.3s infinite;
+    border-radius: 3px;
+}
+#game:focus #cursor{
+    display: block;
+}
+
+.restBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#restartTestButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background:none;
+    border: none;
+    color: var(--sub-color);
+}
+#restartTestButton:hover {
+    color: var(--text-color) !important;
+    background: none !important;
+    border: none !important;
+}
+.keyTips {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    width: 100%;
+    direction: rtl; 
+    margin-bottom: -39px;
+}
+key {
+    color: var(--bg-color);
+    background-color: var(--sub-color);
+    padding: .1rem .3rem;
+    margin: 0rem;
+    border-radius: .1rem;
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 1rem;
+    margin: 0 .5em;
+}
+.above, .below {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px; /* space between keys and p */
+    direction: rtl;
+    font-family: 'Noto Sans Arabic', sans-serif;
+    color:var(--sub-color);
+}
+.above p, .below p {
+    margin: 0 8px;
+    white-space: nowrap;
+    direction: rtl;
+}
+.below{
+    margin-bottom:75px;
+}
+.leftRight {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    direction: rtl;
+    font-family: 'Noto Sans Arabic', sans-serif;
+    color: var(--sub-color);
+    width: 100%;
+    gap: 8px; /* Decreased from 11px */
+}
+.left{
+    margin-right: 150px; /* Increased from 150px */
+}
+.right{
+    margin-left: 150px; /* Increased from 150px */
+}
+.middle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px; /* Decreased from 11px */
+    direction:rtl;
+    font-size:11px;
+    font-family: 'Noto Sans Arabic', sans-serif;
+    margin-left: 379px;
+    color:var(--text-color)
+}
+.middle span{
+    color:var(--main-color);
+}
+
+.left, .right {
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+}
+.left button,.right button{
+    background: none;
+    border: none;
+    color: var(--sub-color);
+    font-size: 11px;
+    padding: 5px;
+}
+.left button.textButton, .right button.textButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.left button.textButton i, .right button.textButton i{
+    margin: 6px; /* Decreased from 9px */
+}
+.left a{
+    color: var(--sub-color);
+    text-decoration: none;
+    font-size: 13px;
+    font-family: 'Noto Sans Arabic', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 6px; /* Decreased from 9px */
+    margin: 0 8px; /* Decreased from 10px */
+}
+.left a:first-child{
+    margin-right: 8px; /* Decreased from 10px */
+}
+button#contactPopupButton{
+    margin: 0 8px; /* Decreased from 10px */
+}
+button.current-theme.textButton{
+    margin: 0 8px; /* Decreased from 10px */
+}
+button.currentVersion.textButton{
+    margin: 0 8px; /* Decreased from 10px */
+}
+footer {
+    flex-shrink: 0;
+}
